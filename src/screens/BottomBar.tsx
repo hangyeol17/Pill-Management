@@ -1,16 +1,32 @@
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
+import { TouchableOpacity, Alert } from 'react-native'
 //import {Colors} from 'react-native-paper'
 
 import * as D from '../data'
 
+//다른 화면으로 이동
+const pressMove = () => { Alert.alert('pressed') }
+
 export default function BottomBar() {
     return (
         <View style={[styles.view]}>
-            <Image style={[styles.icon]} source={require('../assets/images/home.png')}></Image>
-            <Image style={[styles.icon]} source={require('../assets/images/camera.png')}></Image>
-            <Image style={[styles.icon]} source={require('../assets/images/search.png')}></Image>
-            <Image style={[styles.icon]} source={require('../assets/images/user.png')}></Image>
+            <TouchableOpacity onPress={pressMove}>
+                <Image style={[styles.icon]} source={require('../assets/images/home.png')} />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={pressMove}>
+                <Image style={[styles.icon]} source={require('../assets/images/calendar.png')} />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={pressMove}>
+                <Image style={[styles.icon]} source={require('../assets/images/camera.png')} />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={pressMove}>
+                <Image style={[styles.icon]} source={require('../assets/images/search.png')} />
+            </TouchableOpacity>
+
         </View>
     )
 }

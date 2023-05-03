@@ -1,19 +1,12 @@
 import React from 'react'
-import { StyleSheet, SafeAreaView } from 'react-native'
-import TopBar from './src/screens/TopBar'
-import BottomBar from './src/screens/BottomBar'
-import Content from './src/screens/Content'
+import { StyleSheet, SafeAreaView, Text } from 'react-native'
+import Loading from './src/screens/Loading'
+import MainPage from './src/screens/Main'
 
 export default function App() {
-  return (
-    <SafeAreaView style={[styles.flex]}>
-      <TopBar />
-      <Content />
-      <BottomBar />
-    </SafeAreaView>
-  )
-}
+  const children = [<Loading />, <MainPage />]
+  const isLoading = false //true면 로딩창, false면 메인창이 뜬다.
 
-const styles = StyleSheet.create({
-  flex: { flex: 1, backgroundColor: 'white' },
-})
+  return (isLoading ? (children[0]) : (children[1]))
+  //로딩이 완료되면 아래 메인페이지로
+}
