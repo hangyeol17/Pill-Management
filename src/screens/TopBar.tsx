@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableHighlight } from 'react-native';
 import { Alert } from 'react-native';
-//import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 //import {Colors} from 'react-native-paper'
 
 import * as D from '../data';
@@ -17,15 +17,8 @@ export default function TopBar() {
                     source={require('../assets/images/pill.png')}
                     style={[styles.mainImage]}
                 />
-                <View style={[styles.centerView]}>
-                    <Text style={[styles.text]}> 약먹을시간 </Text>
-                </View>
-                <TouchableHighlight onPress={onImg}>
-                    <Image
-                        source={require('../assets/images/user.png')}
-                        style={[styles.userImg]}
-                    />
-                </TouchableHighlight>
+                <Text style={[styles.text, styles.centerView]}> 약먹을시간 </Text>
+                <Icon name='account-circle' size={35} color='white' onPress={onImg} />
             </View>
         </View>
     );
@@ -38,7 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#B9EDDD',
     },
     view: {
-        padding: 15,
+        padding: 5,
         backgroundColor: '#87CBB9',
         flexDirection: 'row',
         alignItems: 'center',
@@ -52,7 +45,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: 'white',
     },
-    mainImage: { width: 20, height: 20, marginRight: 10 },
+    mainImage: { width: 20, height: 20, marginLeft: 10 },
     text: { fontSize: 25, color: 'white', textAlign: 'center' },
     menu: { width: 20, height: 20 },
     centerView: { flex: 1 },
