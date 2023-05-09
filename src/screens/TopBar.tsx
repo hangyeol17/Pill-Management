@@ -14,7 +14,7 @@ export default function TopBar() {
         <View style={[styles.safeArea]}>
             <View style={[styles.view]}>
                 <Image
-                    source={require('../assets/images/pill.png')}
+                    source={require('../assets/images/pillimg.png')}
                     style={[styles.mainImage]}
                 />
                 <Text style={[styles.text, styles.centerView]}> 약먹을시간 </Text>
