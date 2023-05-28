@@ -1,23 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text, Image, ScrollView, SafeAreaView } from 'react-native'
+import { StyleSheet, View, Text, Image, FlatList, SafeAreaView } from 'react-native'
 import { Alert } from 'react-native'
 //import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 //import {Colors} from 'react-native-paper'
 
 //아이콘 react-native 기본말고 fontawesome 쓰고싶음 훨씬 멋있
-import Pill from '../screens/Pill'
+import Pill from '../copy/PillCheck'
 import * as D from '../data'
 
 const name = D.randomName()
-const pills = D.makeArray(5).map(D.createRandomPill) //pill을 담는 pills array
+const pills: D.Pill[] = D.makeArray(3).map(D.createRandomPill) //pill을 담는 pills array
 
 const pressImg = () => { Alert.alert('더 커진 이미지창 넣을 예정^^') }
 
 export default function TopBar() {
-    const children = pills.map((pill) => ( //약 목록에 넣을 data를 일단 faker로 생성해서 배열 형성. 나중에 db로 가져와야 함.
-        <Pill key={pill.code} pill={pill} />
-    ))
-
     //여유 있으면 Text 변경 추가
     //아래 circleinsdie의 위쪽 name은 사용자 이름, 아래쪽 name은 약 이름이다. 아직 data를 수정하지 않아서 차이는 없음.
     return (
@@ -39,56 +35,10 @@ export default function TopBar() {
 
             <View style={styles.scrollview}>
                 <Text style={styles.listname}>내 복용 목록</Text>
-                <ScrollView style={[styles.scroll]}>
-
-                    <View style={[styles.listview]}>
-                        <Image style={[styles.pillImage]} source={require('../assets/images/test1.jpg')} />
-                        <View style={[styles.centerView]}>
-                            <Text style={[styles.text]}>{name}</Text>
-                        </View>
-                        <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
-
-                    </View>
-
-                    <View style={[styles.listview]}>
-                        <Image style={[styles.pillImage]} source={require('../assets/images/test1.jpg')} />
-                        <View style={[styles.centerView]}>
-                            <Text style={[styles.text]}>{name}</Text>
-                        </View>
-                        <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
-
-                    </View>
-
-                    <View style={[styles.listview]}>
-                        <Image style={[styles.pillImage]} source={require('../assets/images/test1.jpg')} />
-                        <View style={[styles.centerView]}>
-                            <Text style={[styles.text]}>{name}</Text>
-                        </View>
-                        <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
-
-                    </View>
-
-                    <View style={[styles.listview]}>
-                        <Image style={[styles.pillImage]} source={require('../assets/images/test1.jpg')} />
-                        <View style={[styles.centerView]}>
-                            <Text style={[styles.text]}>{name}</Text>
-                        </View>
-                        <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
-
-                    </View>
-
-
-                    <View style={[styles.listview]}>
-                        <Image style={[styles.pillImage]} source={require('../assets/images/test1.jpg')} />
-                        <View style={[styles.centerView]}>
-                            <Text style={[styles.text]}>{name}</Text>
-                        </View>
-                        <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
-
-                    </View>
-
-
-                </ScrollView >
+                <FlatList data={pills}
+                    renderItem={({ item }) => <Pill pill={item}></Pill>}
+                    keyExtractor={(item, index) => index.toString()}
+                    ItemSeparatorComponent={() => <View style={styles.seperator} />} />
             </View>
         </SafeAreaView>
     )
@@ -147,15 +97,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    listview: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 5, backgroundColor: 'white'
-    }, //listview 마지막 child에 paddingBottom 추가
-
-    text: { fontSize: 20, textAlign: 'center' },
-    pillImage: { height: 60, width: 60, borderRadius: 30 },
-    centerView: { flex: 1 },
-    editImage: { width: 25, height: 25, opacity: 0.5 },
-
+    seperator: {
+        borderWidth: 1, borderColor: '#DDDDDD'
+    },
 })

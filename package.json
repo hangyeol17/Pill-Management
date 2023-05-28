@@ -10,7 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@faker-js/faker": "^8.0.1",
+    "@mui/material": "^5.13.2",
+    "@mui/styled-engine-sc": "^5.12.0",
     "faker": "^6.6.6",
     "moment": "^2.29.4",
     "moment-with-locales-es6": "^1.0.1",
@@ -18,7 +22,8 @@
     "react-native": "0.71.8",
     "react-native-bouncy-checkbox": "^3.0.7",
     "react-native-paper": "^5.8.0",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

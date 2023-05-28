@@ -3,13 +3,18 @@ import * as F from './faker'
 import * as U from './util'
 
 export const createRandomPill = (): Pill => {
-    const code = F.randomId()
     return {
-        code,
+        pre_id : F.randomId(),
         image: F.randomImage(),
         name: F.randomName(),
-        comments: F.randomParagraphs(),
-        caution: F.randomParagraphs(),
-        company: F.randomName()
+        manufacturer: F.randomName(),
+        time:new Date,
+
+        medication:{
+            morning:F.randomBoolean(),
+            lunch:F.randomBoolean(),
+            dinner:F.randomBoolean(),
+            day : new Date,
+    },
 }
 }

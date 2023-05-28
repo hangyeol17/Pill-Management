@@ -22,7 +22,7 @@ export default function BottomBar() {
 
 const styles = StyleSheet.create({
     view: {
-        flexDirection: 'row', padding: 20, backgroundColor: 'lightblue',
+        flexDirection: 'row', padding: 10, backgroundColor: 'lightblue',
         justifyContent: 'space-around'
     }
 })

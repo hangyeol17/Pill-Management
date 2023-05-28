@@ -4,8 +4,6 @@ import { Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 //import {Colors} from 'react-native-paper'
 
-import * as D from '../data';
-
 const onImg = () => {
     Alert.alert('사용자 정보창');
 };

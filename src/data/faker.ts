@@ -11,4 +11,4 @@ export const randomBoolean = (): boolean => faker.datatype.boolean()
 export const randomParagraphs = (count: number = 2): string =>
     U.makeArray(count).map(faker.lorem.paragraph).join('\n')
 export const randomImage = (): string =>
-    U.unsplashUrl(U.random(800, 1000), U.random(800, 1000))
+    U.unsplashUrl(U.random(100, 100), U.random(100, 100))
