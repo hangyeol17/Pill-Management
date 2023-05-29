@@ -25,7 +25,10 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <ScrollView horizontal contentContainerStyle={[styles.contentContainerStyle]} pagingEnabled>
+      <ScrollView
+        horizontal contentContainerStyle={[styles.contentContainerStyle]}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}>
         <MainPage />
         <Camera />
         <Calendar />
