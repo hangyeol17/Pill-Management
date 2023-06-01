@@ -6,10 +6,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
 <<<<<<< HEAD
         padding: 10, backgroundColor: 'white',
-        paddingHorizontal: 15
-=======
-        padding: 5, backgroundColor: 'white'
->>>>>>> bf725c508148089c1e5b3723be7693d1550f34cd
+        paddingHorizontal: 15,
     }, //listview 마지막 child에 paddingBottom 추가
 
     text: { fontSize: 20, textAlign: 'center' },

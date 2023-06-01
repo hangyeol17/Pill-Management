@@ -21,11 +21,6 @@ const Pill: FC<PillProps> = ({ pill }) => {
             <View style={[styles.centerView]}>
                 <Text style={[styles.text]}>{pill.name}</Text>
             </View>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> bf725c508148089c1e5b3723be7693d1550f34cd
             <Image style={[styles.editImage]} source={require('../assets/images/edit.png')} />
         </View >
     )
