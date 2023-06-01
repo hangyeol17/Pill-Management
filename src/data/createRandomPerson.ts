@@ -1,4 +1,4 @@
-import type {IPerson} from './IPerson'
+import type {IPerson} from './User'
 import * as F from './faker'
 import * as U from './util'
 
