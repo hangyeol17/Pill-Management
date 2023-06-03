@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
     listview: {
         flexDirection: 'row',
         alignItems: 'center',
+<<<<<<< HEAD
         padding: 10, backgroundColor: 'white',
         paddingHorizontal: 15,
     }, //listview 마지막 child에 paddingBottom 추가

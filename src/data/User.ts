@@ -6,10 +6,10 @@ export type User={ //사용자 정보, 건강 정보
     name: string
     birthday : Date
     sex : string
-    height : number
-    weight : number
 
     health_data:{
+        height : number
+        weight : number
         modifiedDate : Date
         pulse : number //맥박
         blood_sugar : number //혈당
