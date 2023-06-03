@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "365342601620",
+    "project_id": "pill-management-e73de",
+    "storage_bucket": "pill-management-e73de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365342601620:android:5a5781abc046bff4cc9f81",
+        "android_client_info": {
+          "package_name": "com.Pill_Management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365342601620-jpnnmo2qiuigtc4cjtpqk5giql13cj4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAchYWRT6i-vfP7OCFY7-WqkIXGjRiE9Is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365342601620-jpnnmo2qiuigtc4cjtpqk5giql13cj4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

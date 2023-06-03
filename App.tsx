@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Dimensions, SafeAreaView, StyleSheet } from 'react-native'
+import { ScrollView, Dimensions, SafeAreaView, StyleSheet, Button } from 'react-native'
 
 import MainPage from './src/screens/Main'
 import Camera from './src/screens/Camera'
@@ -19,6 +19,8 @@ const { width } = Dimensions.get('window')
 const numOfCom = 4
 
 export default function App() {
+
+
   const children = [<Loading />, <MainPage />]
   const isLoading = true //true면 로딩창, false면 메인창이 뜬다.
   //return (isLoading ? (children[0]) : (children[1])) //로딩이 완료되면 메인페이지로
